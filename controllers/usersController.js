@@ -88,8 +88,8 @@ exports.usersUpdatePost = [
 				errors: errors.array(),
 			});
 		}
-		const { firstName, lastName } = matchedData(req);
-		usersStorage.updateUser(req.params.id, { firstName, lastName });
+		const { firstName, lastName, email, age, bio } = matchedData(req);
+		usersStorage.updateUser(req.params.id, { firstName, lastName, email, age, bio });
 		res.redirect('/');
 	},
 ];
